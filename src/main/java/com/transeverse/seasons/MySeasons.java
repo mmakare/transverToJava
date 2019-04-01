@@ -9,31 +9,40 @@ public class MySeasons {
         BufferedReader br = new BufferedReader(
                 new InputStreamReader(System.in));
         System.out.println("Write a month to find out to what season time it belongs:");
-        String input = br.readLine();
+        String month = br.readLine();
 
-        switch (input.toLowerCase()) {
-            case "december":
-            case "january":
-            case "february":
-                System.out.println("WINTER"); //
+        Season season;
+
+        switch (month) {
+            case "December":
+            case "January":
+            case "February":
+                season = Season.WINTER; //
                 break;
-            case "march":
-            case "april":
-            case "may":
-                System.out.println("SPRING");
+            case "March":
+            case "April":
+            case "May":
+                season = Season.SPRING;
                 break;
-            case "june":
-            case "july":
-            case "august":
-                System.out.println("SUMMER");
+            case "June":
+            case "July":
+            case "August":
+                season = Season.SUMMER;
                 break;
-            case "september":
-            case "october":
-            case "november":
-                System.out.println("AUTUMN");
+            case "September":
+            case "October":
+            case "November":
+                season = Season.AUTUMN;
                 break;
             default:
-                System.out.println("This is not a month!");
+                System.out.println("No this month");
         }
+
+    }
+    enum Season {
+        WINTER,
+        SPRING,
+        SUMMER,
+        AUTUMN
     }
 }
