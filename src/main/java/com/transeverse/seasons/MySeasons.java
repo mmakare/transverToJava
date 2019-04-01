@@ -12,12 +12,13 @@ public class MySeasons {
         String month = br.readLine();
 
         Season season;
+        season = Season.WINTER;
 
         switch (month) {
             case "December":
             case "January":
             case "February":
-                season = Season.WINTER; //
+               season = Season.WINTER;
                 break;
             case "March":
             case "April":
@@ -37,6 +38,10 @@ public class MySeasons {
             default:
                 System.out.println("No this month");
         }
+
+        System.out.println(season);
+
+
 
     }
     enum Season {
