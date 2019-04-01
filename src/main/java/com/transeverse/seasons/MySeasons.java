@@ -18,7 +18,7 @@ public class MySeasons {
             case "December":
             case "January":
             case "February":
-               season = Season.WINTER;
+                season = Season.WINTER;
                 break;
             case "March":
             case "April":
@@ -40,10 +40,9 @@ public class MySeasons {
         }
 
         System.out.println(season);
-
     }
 
-    enum Season{
+    enum Season {
         WINTER("WINTER"),
         SPRING("SPRING"),
         SUMMER("SUMMER"),
@@ -52,22 +51,16 @@ public class MySeasons {
 
         // Assigning a value to each enum
         private final String code;
-        Season(String code){
+
+        Season(String code) {
             this.code = code;
         }
 
         // Overriding toString() method to return "" instead of "EMPTY"
         @Override
-        public String toString(){
+        public String toString() {
             return this.code;
         }
-
     }
 
-//    enum Season {
-//        WINTER,
-//        SPRING,
-//        SUMMER,
-//        AUTUMN
-//    }
 }
