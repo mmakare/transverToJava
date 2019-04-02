@@ -12,7 +12,7 @@ public class MySeasons {
         String month = br.readLine();
 
         Season season;
-        season = Season.EMPTY;
+        season = null;
 
         switch (month) {
             case "December":
@@ -39,28 +39,16 @@ public class MySeasons {
                 System.out.println("No this month");
         }
 
-        System.out.println(season);
+        if (season != null) {
+            System.out.println(season);
+        }
     }
 
     enum Season {
-        WINTER("WINTER"),
-        SPRING("SPRING"),
-        SUMMER("SUMMER"),
-        AUTUMN("AUTUMN"),
-        EMPTY("");
-
-        // Assigning a value to each enum
-        private final String code;
-
-        Season(String code) {
-            this.code = code;
-        }
-
-        // Overriding toString() method to return "" instead of "EMPTY"
-        @Override
-        public String toString() {
-            return this.code;
-        }
+        WINTER,
+        SPRING,
+        SUMMER,
+        AUTUMN
     }
-
 }
+
