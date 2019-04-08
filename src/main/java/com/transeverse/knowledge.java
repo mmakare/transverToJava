@@ -2,8 +2,6 @@ package com.transeverse;
 
 import com.transeverse.student.Student;
 
-import java.util.Arrays;
-
 public class knowledge {
     public static void main(String[] args) {
         Student s1 = new Student("Valera", 3);
@@ -14,17 +12,21 @@ public class knowledge {
         System.out.println(s2.toString());
         System.out.println(s3.toString());
 
-        int arrayOfRatings[] = {s1.getRating(), s2.getRating(), s3.getRating()};
-        System.out.println("Average rating: " + Arrays.stream(arrayOfRatings).average().orElse(Double.NaN));
+        System.out.println("Average rating before changing: " + Student.averageRating);
 
-        s1.changeRating();
+        s1.changeRating(6);
+        System.out.println(s1.getRating());
 
-        int averageRating2[] = {s1.getRating(), s2.getRating(), s3.getRating()};
-        System.out.println("Average rating after it was changed: " + Arrays.stream(averageRating2).average().orElse(Double.NaN));
-
+        System.out.println("Average rating after changing: " + Student.averageRating);
     }
 
 }
+        /*
+        int arrayOfRatings[] = {s1.getRating(), s2.getRating(), s3.getRating()};
+        System.out.println("Average rating: " + Arrays.stream(arrayOfRatings).average().orElse(Double.NaN));
+
+int averageRating2[] = {s1.getRating(), s2.getRating(), s3.getRating()};
+        System.out.println("Average rating after it was changed: " + Arrays.stream(averageRating2).average().orElse(Double.NaN));
 
 
       /*

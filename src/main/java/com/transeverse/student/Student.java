@@ -1,17 +1,23 @@
 package com.transeverse.student;
 
 public class Student {
+    public static int count;
+    public static int sumOfRating;
+    public static int averageRating;
     private String name;
     private int rating;
 
     public Student(String name, int rating) {
         this.name = name;
         this.rating = rating;
+        count++;
+        sumOfRating = (sumOfRating + rating);
+        averageRating = sumOfRating/count;
     }
 
     public Student() {
-        this.name = name;
-        this.rating = rating;
+        count++;
+        averageRating = (sumOfRating + rating)/count;
     }
 
     public boolean isBetterStudentThan(Student valerka) {
@@ -22,8 +28,11 @@ public class Student {
         return "Name: " + this.getName() + " rating: " + this.getRating();
     }
 
-    public void changeRating() {
-        setRating(getRating() + 3);
+    public void changeRating(int rating) {
+        sumOfRating -= this.getRating();
+        this.setRating(rating);
+        sumOfRating += rating;
+        averageRating = sumOfRating/count;
     }
 
 
