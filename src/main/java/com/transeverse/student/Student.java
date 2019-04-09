@@ -1,15 +1,27 @@
 package com.transeverse.student;
 
 public class Student {
-    public static int count;
-    public static int sumOfRating;
-    public static int averageRating;
+    public static double count;
+    public static double sumOfRating;
+
+    public static double getAverageRating() {
+        return averageRating;
+    }
+
+    public static double averageRating;
     private String name;
     private int rating;
 
     public Student(String name, int rating) {
         this.name = name;
         this.rating = rating;
+        count++;
+        sumOfRating = (sumOfRating + rating);
+        averageRating = sumOfRating/count;
+    }
+
+    public Student(String name) {
+        this.name = name;
         count++;
         sumOfRating = (sumOfRating + rating);
         averageRating = sumOfRating/count;
@@ -52,5 +64,7 @@ public class Student {
         this.rating = rating;
     }
 
-
+    public static void removeStudent(Student student) {
+        student = null;
+    }
 }

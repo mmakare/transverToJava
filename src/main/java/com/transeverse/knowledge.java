@@ -12,12 +12,12 @@ public class knowledge {
         System.out.println(s2.toString());
         System.out.println(s3.toString());
 
-        System.out.println("Average rating before changing: " + Student.averageRating);
+        System.out.println("Average rating before changing: " + Student.getAverageRating());
 
-        s1.changeRating(6);
+        s1.changeRating(7);
         System.out.println(s1.getRating());
 
-        System.out.println("Average rating after changing: " + Student.averageRating);
+        System.out.println("Average rating after changing: " + Student.getAverageRating());
     }
 
 }
