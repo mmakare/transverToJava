@@ -23,8 +23,6 @@ public class Student {
     public Student(String name) {
         this.name = name;
         count++;
-        sumOfRating = (sumOfRating + rating);
-        averageRating = sumOfRating/count;
     }
 
     public Student() {
@@ -61,10 +59,15 @@ public class Student {
     }
 
     public void setRating(int rating) {
+        sumOfRating = (sumOfRating + rating);
+        averageRating = sumOfRating/count;
         this.rating = rating;
     }
 
     public static void removeStudent(Student student) {
+        count--;
+        sumOfRating = (sumOfRating - student.rating);
+        averageRating = sumOfRating/count;
         student = null;
     }
 }
