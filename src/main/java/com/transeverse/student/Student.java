@@ -39,10 +39,10 @@ public class Student {
     }
 
     public void changeRating(int rating) {
-        sumOfRating -= this.getRating();
+        int irating1 = this.getRating();
+        double drating2 = irating1;
+        sumOfRating -= drating2;
         this.setRating(rating);
-        sumOfRating += rating;
-        averageRating = sumOfRating/count;
     }
 
 

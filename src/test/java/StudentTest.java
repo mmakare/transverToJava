@@ -13,6 +13,10 @@ public class StudentTest {
     @Test
     public void testGetAvgRating() {
 
+        if (Student.count == 0.0){
+            Student.averageRating = 0.0;
+        }
+
         assertEquals(Student.getAverageRating(), 0.0d, "Average rating is wrong");
 
         Student student1 = new Student("Petro");
@@ -102,6 +106,10 @@ public class StudentTest {
 
     @Test
     public void testChangeRating() {
+
+        if (Student.count == 0.0){
+            Student.averageRating = 0.0;
+        }
 
         assertEquals(Student.getAverageRating(), 0.0d, "Average rating is wrong");
 

@@ -14,7 +14,7 @@ public class knowledge {
 
         System.out.println("Average rating before changing: " + Student.getAverageRating());
 
-        s1.changeRating(7);
+        s1.changeRating(6);
         System.out.println(s1.getRating());
 
         System.out.println("Average rating after changing: " + Student.getAverageRating());
