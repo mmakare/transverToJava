@@ -5,6 +5,9 @@ public class Student {
     public static double sumOfRating;
 
     public static double getAverageRating() {
+        if (Student.count == 0.0){
+            Student.averageRating = 0.0;
+        }
         return averageRating;
     }
 
